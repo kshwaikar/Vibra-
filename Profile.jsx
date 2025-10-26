@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
-  const [profile, setProfile] = useState({
+  const defaultProfile = {
     name: "Sakshi",
     age: 21,
     gender: "Female",
     bio: "Lover of calm mornings, lo-fi music & mindful vibes 🌸",
     photo: "https://i.pravatar.cc/150?img=47",
+  };
+
+  const [profile, setProfile] = useState(() => {
+    const saved = localStorage.getItem("vibra_profile");
+    return saved ? JSON.parse(saved) : defaultProfile;
   });
 
   const [editedProfile, setEditedProfile] = useState(profile);
@@ -22,6 +27,7 @@ export default function Profile() {
   };
 
   const handleSave = () => {
+    localStorage.setItem("vibra_profile", JSON.stringify(editedProfile));
     setProfile(editedProfile);
     setIsEditing(false);
   };
@@ -155,5 +161,6 @@ export default function Profile() {
     </div>
   );
 }
+
 
 
