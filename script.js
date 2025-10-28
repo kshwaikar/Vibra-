@@ -158,7 +158,7 @@ function sendMessage() {
     addMessage(message, 'user');
     input.value = ''; 
     addTypingIndicator(); 
-    fetch('http://127.0.0.1:8000/generate', {
+    fetch('https://vibra-j5e1.onrender.com/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify({ prompt: message }) 
@@ -252,3 +252,4 @@ window.addEventListener('DOMContentLoaded', () => {
 // ============================================
 function createMoodBubbles() { /* ... function code ... */ }
 createMoodBubbles(); // Enable floating bubbles
+
