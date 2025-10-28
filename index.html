@@ -39,6 +39,7 @@
                     <li onclick="showScreen('moodCheck')">Mood</li>
                     <li onclick="showScreen('music')">Music</li>
                     <li onclick="showScreen('connect')">Connect</li>
+                    <li onclick="showScreen('chatbot')">Chatbot</li>
                     <li onclick="showScreen('profile')">Profile</li>
                 </ul>
             </div>
@@ -78,36 +79,11 @@
             <div class="card">
                 <h3>📊 Weekly Mood Trends</h3>
                 <div class="mood-chart">
-                    <div class="mood-bar">
-                        <div class="mood-label">😢 Sad</div>
-                        <div class="mood-bar-fill">
-                            <div class="mood-bar-progress" style="width: 10%">10%</div>
-                        </div>
-                    </div>
-                    <div class="mood-bar">
-                        <div class="mood-label">😊 Happy</div>
-                        <div class="mood-bar-fill">
-                            <div class="mood-bar-progress" style="width: 40%">40%</div>
-                        </div>
-                    </div>
-                    <div class="mood-bar">
-                        <div class="mood-label">😌 Calm</div>
-                        <div class="mood-bar-fill">
-                            <div class="mood-bar-progress" style="width: 30%">30%</div>
-                        </div>
-                    </div>
-                    <div class="mood-bar">
-                        <div class="mood-label">⚡ Energetic</div>
-                        <div class="mood-bar-fill">
-                            <div class="mood-bar-progress" style="width: 15%">15%</div>
-                        </div>
-                    </div>
-                    <div class="mood-bar">
-                        <div class="mood-label">💖 Romantic</div>
-                        <div class="mood-bar-fill">
-                            <div class="mood-bar-progress" style="width: 5%">5%</div>
-                        </div>
-                    </div>
+                    <div class="mood-bar"> <div class="mood-label">😢 Sad</div> <div class="mood-bar-fill"> <div class="mood-bar-progress" style="width: 10%">10%</div> </div> </div>
+                    <div class="mood-bar"> <div class="mood-label">😊 Happy</div> <div class="mood-bar-fill"> <div class="mood-bar-progress" style="width: 40%">40%</div> </div> </div>
+                    <div class="mood-bar"> <div class="mood-label">😌 Calm</div> <div class="mood-bar-fill"> <div class="mood-bar-progress" style="width: 30%">30%</div> </div> </div>
+                    <div class="mood-bar"> <div class="mood-label">⚡ Energetic</div> <div class="mood-bar-fill"> <div class="mood-bar-progress" style="width: 15%">15%</div> </div> </div>
+                    <div class="mood-bar"> <div class="mood-label">💖 Romantic</div> <div class="mood-bar-fill"> <div class="mood-bar-progress" style="width: 5%">5%</div> </div> </div>
                 </div>
             </div>
         </div>
@@ -129,7 +105,7 @@
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </div>
-                    <div class="profile-info">
+                     <div class="profile-info">
                         <h2 id="userName">Alex Johnson</h2>
                         <p id="userDetails">🎂 Age: 24 | 📍 San Francisco, CA</p>
                         <p id="userBio" style="margin-top: 12px; max-width: 500px; margin-left: auto; margin-right: auto;">
@@ -138,28 +114,15 @@
                         </p>
                     </div>
                     <div style="display: flex; gap: 12px; justify-content: center; margin-top: 20px;">
-                        <button class="btn btn-primary" onclick="shareProfile()">
-                            <i class="fas fa-share-alt"></i> Share Profile
-                        </button>
-                        <button class="btn btn-secondary" onclick="openEditProfile()">
-                            <i class="fas fa-edit"></i> Edit Profile
-                        </button>
+                        <button class="btn btn-primary" onclick="shareProfile()"> <i class="fas fa-share-alt"></i> Share Profile </button>
+                        <button class="btn btn-secondary" onclick="openEditProfile()"> <i class="fas fa-edit"></i> Edit Profile </button>
                     </div>
                 </div>
 
                 <div class="profile-stats">
-                    <div class="card stat-card">
-                        <div class="stat-number">127</div>
-                        <div class="stat-label">Total Check-ins</div>
-                    </div>
-                    <div class="card stat-card">
-                        <div class="stat-number">7</div>
-                        <div class="stat-label">Day Streak</div>
-                    </div>
-                    <div class="card stat-card">
-                        <div class="stat-number">89%</div>
-                        <div class="stat-label">Habit Score</div>
-                    </div>
+                    <div class="card stat-card"> <div class="stat-number">127</div> <div class="stat-label">Total Check-ins</div> </div>
+                    <div class="card stat-card"> <div class="stat-number">7</div> <div class="stat-label">Day Streak</div> </div>
+                    <div class="card stat-card"> <div class="stat-number">89%</div> <div class="stat-label">Habit Score</div> </div>
                 </div>
             </div>
         </div>
@@ -169,119 +132,80 @@
                 <div class="mood-selector">
                     <h3>How are you feeling today? 💭</h3>
                     <div class="mood-options">
-                        <button class="mood-btn" data-mood="sad" data-color="#4A90E2" onclick="selectMood(this)">
-                            <span class="mood-emoji">😢</span>
-                            <span>Sad</span>
-                        </button>
-                        <button class="mood-btn" data-mood="happy" data-color="#F5D76E" onclick="selectMood(this)">
-                            <span class="mood-emoji">😊</span>
-                            <span>Happy</span>
-                        </button>
-                        <button class="mood-btn" data-mood="calm" data-color="#A3D9B1" onclick="selectMood(this)">
-                            <span class="mood-emoji">😌</span>
-                            <span>Calm</span>
-                        </button>
-                        <button class="mood-btn" data-mood="energetic" data-color="#F2994A" onclick="selectMood(this)">
-                            <span class="mood-emoji">⚡</span>
-                            <span>Energetic</span>
-                        </button>
-                        <button class="mood-btn" data-mood="romantic" data-color="#F28BBD" onclick="selectMood(this)">
-                            <span class="mood-emoji">💖</span>
-                            <span>Romantic</span>
-                        </button>
+                        <button class="mood-btn" data-mood="sad" data-color="#4A90E2" onclick="selectMood(this)"> <span class="mood-emoji">😢</span> <span>Sad</span> </button>
+                        <button class="mood-btn" data-mood="happy" data-color="#F5D76E" onclick="selectMood(this)"> <span class="mood-emoji">😊</span> <span>Happy</span> </button>
+                        <button class="mood-btn" data-mood="calm" data-color="#A3D9B1" onclick="selectMood(this)"> <span class="mood-emoji">😌</span> <span>Calm</span> </button>
+                        <button class="mood-btn" data-mood="energetic" data-color="#F2994A" onclick="selectMood(this)"> <span class="mood-emoji">⚡</span> <span>Energetic</span> </button>
+                        <button class="mood-btn" data-mood="romantic" data-color="#F28BBD" onclick="selectMood(this)"> <span class="mood-emoji">💖</span> <span>Romantic</span> </button>
                     </div>
                 </div>
 
                 <div class="habit-checklist">
                     <h3>Today's Wellness Goals 🎯</h3>
-                    
                     <div class="add-habit-form">
                         <input type="text" id="newHabitInput" placeholder="Add a new habit (e.g., Go for a walk)">
-                        <button class="btn-add-habit" onclick="addHabit()">
-                            <i class="fas fa-plus"></i> Add
-                        </button>
+                        <button class="btn-add-habit" onclick="addHabit()"> <i class="fas fa-plus"></i> Add </button>
                     </div>
-                
-                    <div id="habitListContainer">
-                        </div>
+                    <div id="habitListContainer"> </div>
                 </div>
-                <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="saveMoodAndHabits()">
-                    Save Today's Check-in ✨
-                </button>
+                <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="saveMoodAndHabits()"> Save Today's Check-in ✨ </button>
             </div>
         </div>
 
         <div id="musicScreen" class="screen container hidden">
             <div class="card music-card">
                 <h2 style="margin-bottom: 24px; text-align: center;">🎵 Music for Your Mood</h2>
-                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&h=300&fit=crop" 
-                     alt="Album Art" class="album-art" id="albumArt">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&h=300&fit=crop" alt="Album Art" class="album-art" id="albumArt">
                 <div class="music-info">
                     <h3 id="songTitle">Peaceful Piano</h3>
                     <p id="songArtist">Various Artists • Perfect for your calm mood 😌</p>
                 </div>
                 <div class="music-actions">
-                    <button class="platform-btn spotify-btn" onclick="openSpotify()">
-                        <i class="fab fa-spotify"></i> Play on Spotify
-                    </button>
+                    <button class="platform-btn spotify-btn" onclick="openSpotify()"> <i class="fab fa-spotify"></i> Play on Spotify </button>
                 </div>
-                <button class="btn btn-secondary" style="margin-top: 20px; width: 100%;" onclick="refreshMusic()">
-                    🔄 Get Another Suggestion
-                </button>
+                <button class="btn btn-secondary" style="margin-top: 20px; width: 100%;" onclick="refreshMusic()"> 🔄 Get Another Suggestion </button>
             </div>
         </div>
         
         <div id="connectScreen" class="screen container hidden">
-            <h1 class="connect-title">💬 Vibra Connect</h1>
+             <h1 class="connect-title">💬 Vibra Connect</h1>
+             <div id="connectInitialView" class="text-center space-y-4 card">
+                 <p class="text-lg opacity-90"> Connect with a random person and share mindful, positive chats 💫 </p>
+                 <button onclick="connectNewPerson()" class="btn btn-primary connect-now-btn"> Connect Now </button>
+             </div>
+             <div id="connectChatView" class="hidden w-full max-w-md card connect-chat-card">
+                 <div class="connect-chat-header">
+                     <h2 class="connect-chat-partner"> Chatting with <span id="partnerName">...</span> </h2>
+                     <button onclick="disconnectAndFindNew()" class="btn-new-person"> 🔄 New Person </button>
+                 </div>
+                 <div class="connect-messages-container" id="connectMessages"> </div>
+                 <form onsubmit="handleConnectSend(event)" class="connect-input-area">
+                     <input type="text" id="connectInput" placeholder="Type a message..." class="connect-input-field"/>
+                     <button type="submit" class="connect-send-btn"> ➤ </button>
+                 </form>
+             </div>
+         </div>
 
-            <div id="connectInitialView" class="text-center space-y-4 card">
-                <p class="text-lg opacity-90">
-                    Connect with a random person and share mindful, positive chats 💫
-                </p>
-                <button
-                    onclick="connectNewPerson()"
-                    class="btn btn-primary connect-now-btn"
-                >
-                    Connect Now
-                </button>
-            </div>
-
-            <div id="connectChatView" class="hidden w-full max-w-md card connect-chat-card">
-                <div class="connect-chat-header">
-                    <h2 class="connect-chat-partner">
-                        Chatting with <span id="partnerName">...</span>
-                    </h2>
-                    <button
-                        onclick="disconnectAndFindNew()"
-                        class="btn-new-person"
-                    >
-                        🔄 New Person
+        <div id="chatbotScreen" class="screen container hidden">
+            <div class="chatbot-window-fullpage card"> 
+                <div class="chatbot-header">
+                    <h3>✨ Vibra Assistant</h3> 
+                </div>
+                <div class="chatbot-messages" id="chatMessages">
+                    <div class="message bot">
+                        Hi there! I'm your wellness companion. How can I help brighten your day? 🌟
+                    </div>
+                </div>
+                <div class="chatbot-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message..." 
+                           onkeypress="if(event.key === 'Enter') sendMessage()">
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
-
-                <div class="connect-messages-container" id="connectMessages">
-                    </div>
-
-                <form
-                    onsubmit="handleConnectSend(event)"
-                    class="connect-input-area"
-                >
-                    <input
-                        type="text"
-                        id="connectInput"
-                        placeholder="Type a message..."
-                        class="connect-input-field"
-                    />
-                    <button
-                        type="submit"
-                        class="connect-send-btn"
-                    >
-                        ➤
-                    </button>
-                </form>
             </div>
         </div>
-        </div>
+        </div> 
 
     <div id="editProfileModal" class="modal hidden">
         <div class="modal-content">
@@ -290,52 +214,15 @@
                 <button class="close-modal" onclick="closeEditProfile()">×</button>
             </div>
             <form onsubmit="event.preventDefault(); saveProfile();">
-                <div class="form-group">
-                    <label for="editName">Full Name *</label>
-                    <input type="text" id="editName" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="editAge">Age</label>
-                    <input type="number" id="editAge" placeholder="Enter your age" min="13" max="120">
-                </div>
-                <div class="form-group">
-                    <label for="editLocation">Location</label>
-                    <input type="text" id="editLocation" placeholder="City, Country">
-                </div>
-                <div class="form-group">
-                    <label for="editBio">Bio</label>
-                    <textarea id="editBio" placeholder="Tell us about yourself..."></textarea>
-                </div>
+                <div class="form-group"> <label for="editName">Full Name *</label> <input type="text" id="editName" placeholder="Enter your name" required> </div>
+                <div class="form-group"> <label for="editAge">Age</label> <input type="number" id="editAge" placeholder="Enter your age" min="13" max="120"> </div>
+                <div class="form-group"> <label for="editLocation">Location</label> <input type="text" id="editLocation" placeholder="City, Country"> </div>
+                <div class="form-group"> <label for="editBio">Bio</label> <textarea id="editBio" placeholder="Tell us about yourself..."></textarea> </div>
                 <div class="form-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeEditProfile()">Cancel</button>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
             </form>
-        </div>
-    </div>
-
-    <button class="chatbot-toggle hidden" id="chatbotToggle" onclick="toggleChatbot()">
-        <i class="fas fa-comment-dots"></i>
-    </button>
-
-    <div class="chatbot-window hidden" id="chatbotWindow">
-        <div class="chatbot-header">
-            <h3>💬 Vibra Assistant</h3>
-            <button class="close-chat" onclick="toggleChatbot()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="chatbot-messages" id="chatMessages">
-            <div class="message bot">
-                Hi there! I'm your wellness companion. How can I help brighten your day? 🌟
-            </div>
-        </div>
-        <div class="chatbot-input-area">
-            <input type="text" id="chatInput" placeholder="Type your message..." 
-                   onkeypress="if(event.key === 'Enter') sendMessage()">
-            <button class="send-btn" onclick="sendMessage()">
-                <i class="fas fa-paper-plane"></i>
-            </button>
         </div>
     </div>
 
