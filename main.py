@@ -9,10 +9,10 @@ from fastapi.middleware.cors import CORSMiddleware # Important for frontend conn
 # --- Configuration ---
 # BEST PRACTICE: Load API key from environment variable
 # dotenv.load_dotenv()
-# API_KEY = os.getenv("GEMINI_API_KEY")
+ API_KEY = os.getenv("GEMINI_API_KEY")
 # --- OR ---
 # For quick testing (replace with your actual key):
-API_KEY = "AIzaSyATPUPsHOU0g6UjAOGUcQ-Swj_Vn_Pi5qk" # <<< PASTE YOUR KEY HERE (Get from Google AI Studio)
+
 
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY not found. Please set it as an environment variable or in the script.")
@@ -109,4 +109,5 @@ def read_root():
 #    pip install fastapi uvicorn google-generativeai python-dotenv
 # 3. Replace "YOUR_GEMINI_API_KEY" with your actual key (or set it as an environment variable)
 # 4. Run the server from your terminal: uvicorn main:app --reload
+
 #    (The server will likely run on http://127.0.0.1:8000)
