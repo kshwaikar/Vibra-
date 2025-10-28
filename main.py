@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware # Important for frontend conn
 # --- Configuration ---
 # BEST PRACTICE: Load API key from environment variable
 # dotenv.load_dotenv()
- API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY")
 # --- OR ---
 # For quick testing (replace with your actual key):
 
@@ -111,3 +111,4 @@ def read_root():
 # 4. Run the server from your terminal: uvicorn main:app --reload
 
 #    (The server will likely run on http://127.0.0.1:8000)
+
